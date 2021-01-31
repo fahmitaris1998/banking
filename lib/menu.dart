@@ -1,4 +1,7 @@
+import 'package:banking/widget/cardlistmenu.dart';
 import 'package:flutter/material.dart';
+
+import 'data/data.dart';
 
 class Menu extends StatelessWidget {
   @override
@@ -69,6 +72,21 @@ class Menu extends StatelessWidget {
                 SizedBox(width: 15.0,),
                 Expanded(child: Text("Hello , Vicky Jonas",style: TextStyle(color: Color.fromRGBO(35,39,77,0.95),fontSize: 18.0,fontWeight: FontWeight.w500),),)
               ],
+            ),
+          ),
+          SizedBox(height: 10.0,),
+          Expanded(
+            child: Container(
+              padding: EdgeInsets.symmetric(horizontal: 25.0),
+              child: ListView.builder(
+                  shrinkWrap: true,
+                  scrollDirection: Axis.vertical,
+                  physics: BouncingScrollPhysics(),
+                  itemCount: datamenu.length,
+                  itemBuilder: (context,index){
+                    return Cardlistmenu(image: datamenu[index]["image"],title: datamenu[index]["title"],);
+                  }
+              ),
             ),
           )
         ],

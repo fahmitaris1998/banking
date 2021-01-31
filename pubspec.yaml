@@ -51,6 +51,12 @@ flutter:
     - assets/image2.png
     - assets/bg1.png
     - assets/foto.png
+    - assets/promo.png
+    - assets/star.png
+    - assets/lokasi.png
+    - assets/seting.png
+    - assets/contact.png
+    - assets/logout.png
 
   # To add assets to your application, add an assets section, like this:
   # assets:
