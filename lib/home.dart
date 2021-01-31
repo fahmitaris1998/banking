@@ -158,6 +158,34 @@ class Home extends StatelessWidget {
                             fit: BoxFit.fill
                           )
                         ),
+                        child: Stack(
+                          children: [
+                            Positioned(
+                              top:30,
+                                left:20,
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text("Insifr Business You",style: TextStyle(fontSize: 18.0,fontWeight: FontWeight.w500,color: Color.fromRGBO(35, 38, 79, 0.95)),),
+                                    SizedBox(height: 7.0,),
+                                    Text("Travel Without the fees",style: TextStyle(fontSize: 15.0,fontWeight: FontWeight.w400,color: Color.fromRGBO(35, 38, 79, 0.95)),)
+                                  ],
+                              )
+                            ),
+                            Positioned(
+                                left: 20.0,
+                                bottom: 25,
+                                child: Container(
+                              decoration: BoxDecoration(
+                                color: Colors.white,
+                                borderRadius: BorderRadius.circular(8.0)
+                              ),
+                              padding: EdgeInsets.symmetric(vertical: 12.0,horizontal: 18.0),
+                              child: Text("Get Insifr Business You",style:  TextStyle(fontSize: 16.0,fontWeight: FontWeight.w400,color: Color.fromRGBO(237,106,38, 0.95),),)
+                            )
+                            )
+                          ],
+                        ),
 
                       )
                     ],
