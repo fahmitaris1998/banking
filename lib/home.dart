@@ -1,5 +1,6 @@
 
 
+import 'package:banking/menu.dart';
 import 'package:banking/widget/card.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -70,48 +71,53 @@ class Home extends StatelessWidget {
               ),
             ),
             SizedBox(height: 45.0,),
-            Container(
-              width: double.infinity,
-              margin: EdgeInsets.symmetric(horizontal: 25.0),
-              padding: EdgeInsets.only(left: 15,right: 22.0,top: 15.0,bottom: 15.0),
-              decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.circular(10.0),
-                  boxShadow: [
-                    BoxShadow(
-                      color: Color.fromRGBO(53, 63, 222, 0.13),
-                      spreadRadius: 3,
-                      blurRadius:40,
-                      offset: Offset(0, 6),
-                    )
-                  ]
-              ),
-              child: Row(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  Container(
-                    padding: EdgeInsets.all(11),
-                    decoration: BoxDecoration(
-                      color: Color.fromRGBO(53, 63, 222,0.06),
-                      borderRadius: BorderRadius.circular(8.0)
+            GestureDetector(
+              onTap: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context)=>Menu()));
+              },
+              child: Container(
+                width: double.infinity,
+                margin: EdgeInsets.symmetric(horizontal: 25.0),
+                padding: EdgeInsets.only(left: 15,right: 22.0,top: 15.0,bottom: 15.0),
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.circular(10.0),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Color.fromRGBO(53, 63, 222, 0.13),
+                        spreadRadius: 3,
+                        blurRadius:40,
+                        offset: Offset(0, 6),
+                      )
+                    ]
+                ),
+                child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    Container(
+                      padding: EdgeInsets.all(11),
+                      decoration: BoxDecoration(
+                        color: Color.fromRGBO(53, 63, 222,0.06),
+                        borderRadius: BorderRadius.circular(8.0)
+                      ),
+                      child: Image(image: ExactAssetImage('assets/kado.png'),),
                     ),
-                    child: Image(image: ExactAssetImage('assets/kado.png'),),
-                  ),
-                  SizedBox(width: 13.0,),
-                  Expanded(
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      children: [
-                        Text("Refer Friends",style: TextStyle(color: Color.fromRGBO(35,39,77, 0.95),fontSize: 16.0,fontWeight: FontWeight.w400),),
-                        SizedBox(height: 5.0,),
-                        Text("Earn money from every friend",style: TextStyle(color: Color.fromRGBO(35,39,77, 0.4),fontSize: 13.0,fontWeight: FontWeight.w400))
+                    SizedBox(width: 13.0,),
+                    Expanded(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        children: [
+                          Text("Refer Friends",style: TextStyle(color: Color.fromRGBO(35,39,77, 0.95),fontSize: 16.0,fontWeight: FontWeight.w400),),
+                          SizedBox(height: 5.0,),
+                          Text("Earn money from every friend",style: TextStyle(color: Color.fromRGBO(35,39,77, 0.4),fontSize: 13.0,fontWeight: FontWeight.w400))
 
-                      ],
+                        ],
+                      ),
                     ),
-                  ),
-                  Icon(Icons.arrow_forward_ios_rounded,size: 20,color: Color.fromRGBO( 136,138,177, 1),)
-                ],
+                    Icon(Icons.arrow_forward_ios_rounded,size: 20,color: Color.fromRGBO( 136,138,177, 1),)
+                  ],
+                ),
               ),
             ),
             SizedBox(height: 40.0,),
